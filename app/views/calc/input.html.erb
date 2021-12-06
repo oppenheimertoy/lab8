@@ -1,0 +1,17 @@
+<h1>Лабораторная работа No8(Вариант 17)</h1>
+<%= form_tag("/calc/view", :method => "get") do %>
+  <table>
+    <tr>
+      <td><%= label_tag("Введите n:") %></td>
+      <td><%= text_field_tag(:arr_len) %></td>
+    </tr>
+    <tr>
+      <td><%= label_tag("Введите числа:") %></td>
+      <td><%= text_field_tag(:arr) %> <br/></td>
+    </tr>
+    <tr>
+      <td><%= submit_tag("Поиск совершенных чисел") %></td>
+    </tr>
+  </table>
+<% end %>
+

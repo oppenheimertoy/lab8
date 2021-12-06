@@ -1,0 +1,22 @@
+<h1>Результаты поиска</h1>
+<% if @count %>
+  <table border="1px">
+    <caption>Таблица<caption>
+      <tr>
+        <th>No</th>
+        <th>Отрезки</th>
+      </tr>
+      <% @table.each_with_index do |node, i| %>
+        <tr>
+          <td><%= i %></td>
+          <td><%= node %></td>
+        </tr>
+      <% end %>
+  </table>
+  </br>
+  <p>Количество отрезков:<em id="count"> <%= @count %></em></p>
+  <p>Отрезок максимальной длины:<em id="max"><%= @max %></em></p>
+<% else %>
+  <p> <h2> Неккоректный ввод! </h2> </p>
+<% end %>
+<%= link_to "Repeat to form", :calc_input %>
